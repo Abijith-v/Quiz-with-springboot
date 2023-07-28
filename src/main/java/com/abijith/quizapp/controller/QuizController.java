@@ -7,8 +7,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -25,6 +23,6 @@ public class QuizController {
 
     @GetMapping("/difficulty/{difficultyLevel}")
     public List<Questions> getAllByCategory(@PathVariable Integer difficultyLevel) {
-        return quizService.getAllQuestionsByDifficulty(difficultyLezvel);
+        return quizService.getAllQuestionsByDifficulty(difficultyLevel);
     }
 }
